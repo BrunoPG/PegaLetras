@@ -9,6 +9,9 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	
 	private bool swipeLeft;
 	private bool swipeRight;
+    private bool swipeDown;
+    private bool swipeUp;
+    private bool click;
 
 	
 	public bool IsSwipeLeft()
@@ -33,8 +36,41 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 		return false;
 	}
 
-	
-	public void UserDetected(uint userId, int userIndex)
+    public bool IsSwipeDown()
+    {
+        if (swipeDown)
+        {
+            swipeDown = false;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool IsSwipeUp()
+    {
+        if (swipeUp)
+        {
+            swipeUp = false;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool IsClick()
+    {
+        if (click)
+        {
+            click = false;
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public void UserDetected(uint userId, int userIndex)
 	{
 		// detect these user specific gestures
 		KinectManager manager = KinectManager.Instance;
