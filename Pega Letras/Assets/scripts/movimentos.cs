@@ -26,7 +26,7 @@ public class movimentos : MonoBehaviour
     void Update()
     {
         if (selecionado == null)
-            selecionado = botao3;
+            selecionado = botao1;
         // dont run Update() if there is no user
         KinectManager kinectManager = KinectManager.Instance;
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))

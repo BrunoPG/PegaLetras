@@ -12,9 +12,11 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
     private bool swipeDown;
     private bool swipeUp;
     private bool click;
+    private bool wave;
+    private bool jump;
 
-	
-	public bool IsSwipeLeft()
+
+    public bool IsSwipeLeft()
 	{
 		if(swipeLeft)
 		{
@@ -69,6 +71,28 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
         return false;
     }
 
+    public bool IsJump()
+    {
+        if (jump)
+        {
+            jump = false;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool IsWave()
+    {
+        if (wave)
+        {
+            wave = false;
+            return true;
+        }
+
+        return false;
+    }
+
 
     public void UserDetected(uint userId, int userIndex)
 	{
@@ -77,10 +101,16 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 		
 		manager.DetectGesture(userId, KinectGestures.Gestures.SwipeLeft);
 		manager.DetectGesture(userId, KinectGestures.Gestures.SwipeRight);
+        manager.DetectGesture(userId, KinectGestures.Gestures.SwipeDown);
+        manager.DetectGesture(userId, KinectGestures.Gestures.SwipeUp);
+        manager.DetectGesture(userId, KinectGestures.Gestures.Click);
+        manager.DetectGesture(userId, KinectGestures.Gestures.Push);
+        manager.DetectGesture(userId, KinectGestures.Gestures.Jump);
+        manager.DetectGesture(userId, KinectGestures.Gestures.Wave);
 
-		if(GestureInfo != null)
+        if (GestureInfo != null)
 		{
-			GestureInfo.GetComponent<GUIText>().text = "Swipe left or right to change the slides.";
+			GestureInfo.GetComponent<GUIText>().text = GestureInfo.name;
 		}
 	}
 	
@@ -106,11 +136,21 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 		{
 			GestureInfo.GetComponent<GUIText>().text = sGestureText;
 		}
-		
-		if(gesture == KinectGestures.Gestures.SwipeLeft)
-			swipeLeft = true;
-		else if(gesture == KinectGestures.Gestures.SwipeRight)
-			swipeRight = true;
+
+        if (gesture == KinectGestures.Gestures.SwipeLeft)
+            swipeLeft = true;
+        else if (gesture == KinectGestures.Gestures.SwipeRight)
+            swipeRight = true;
+        else if (gesture == KinectGestures.Gestures.SwipeDown)
+            swipeDown = true;
+        else if (gesture == KinectGestures.Gestures.SwipeUp)
+            swipeUp = true;
+        else if (gesture == KinectGestures.Gestures.Click || gesture == KinectGestures.Gestures.Push)
+            click = true;
+        else if (gesture == KinectGestures.Gestures.Wave)
+            wave = true;
+        else if (gesture == KinectGestures.Gestures.Jump)
+            jump = true;
 
 		return true;
 	}

@@ -175,6 +175,7 @@
     <Compile Include="Assets\Neurorehab\Scripts\Utilities\TransformEx.cs" />
     <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
     <Compile Include="Assets\scripts\color.cs" />
+    <Compile Include="Assets\scripts\configHitoria.cs" />
     <Compile Include="Assets\scripts\Configuracao.cs" />
     <Compile Include="Assets\scripts\hand.cs" />
     <Compile Include="Assets\scripts\MenuInicial.cs" />
