@@ -1,12 +1,17 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
-	
+    public TextMeshProUGUI Tempo;
+   
+
 	private bool swipeLeft;
 	private bool swipeRight;
     private bool swipeDown;
@@ -94,6 +99,13 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
     }
 
 
+    public void ContarTempo(String tempo)
+    {
+        if (Tempo != null)
+            Tempo.GetComponent<TextMeshProUGUI>().text = tempo;
+    }
+
+
     public void UserDetected(uint userId, int userIndex)
 	{
 		// detect these user specific gestures
@@ -107,7 +119,7 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
         manager.DetectGesture(userId, KinectGestures.Gestures.Push);
         manager.DetectGesture(userId, KinectGestures.Gestures.Jump);
         manager.DetectGesture(userId, KinectGestures.Gestures.Wave);
-
+        
         if (GestureInfo != null)
 		{
 			GestureInfo.GetComponent<GUIText>().text = GestureInfo.name;
@@ -125,8 +137,24 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	public void GestureInProgress(uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
-		// don't do anything here
-	}
+		if (gesture == KinectGestures.Gestures.Click)
+        {
+
+            if (progress < 0.5)
+                ContarTempo("5");
+            else if (progress < 0.6)
+                ContarTempo("4");
+            else if (progress < 0.7)
+                ContarTempo("3");
+            else if (progress < 0.8)
+                ContarTempo("2");
+            else if (progress < 0.99)
+                ContarTempo("1");
+            else ContarTempo("0");
+        } 
+        
+       
+    }
 
 	public bool GestureCompleted (uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
@@ -145,21 +173,23 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
             swipeDown = true;
         else if (gesture == KinectGestures.Gestures.SwipeUp)
             swipeUp = true;
-        else if (gesture == KinectGestures.Gestures.Click || gesture == KinectGestures.Gestures.Push)
+        else if (gesture == KinectGestures.Gestures.Click)
             click = true;
         else if (gesture == KinectGestures.Gestures.Wave)
             wave = true;
         else if (gesture == KinectGestures.Gestures.Jump)
             jump = true;
+        ContarTempo("");
 
-		return true;
+        return true;
 	}
 
 	public bool GestureCancelled (uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              KinectWrapper.NuiSkeletonPositionIndex joint)
 	{
-		// don't do anything here, just reset the gesture state
-		return true;
+        if (gesture == KinectGestures.Gestures.Click)
+            ContarTempo(""); ;
+        return true;
 	}
 	
 }

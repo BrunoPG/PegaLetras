@@ -19,21 +19,24 @@ public class configHitoria : MonoBehaviour
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
             return;
 
-        if (gestureListener.IsWave())
+         if (gestureListener.IsWave())
             voltar();
         else if (gestureListener.IsJump())
-            pular();        
+            pular();       
     }
 
     void voltar()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
         this.enabled = false;
+        Destroy(this);
     }
 
     void pular()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
+
         this.enabled = false;
+        Destroy(this);
     }
 }

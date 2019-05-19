@@ -1231,13 +1231,13 @@ public class KinectManager : MonoBehaviour
 				{
 					if(gestureData.complete)
 					{
-						if(gestureData.gesture == KinectGestures.Gestures.Click)
+					/*	if(gestureData.gesture == KinectGestures.Gestures.Click)
 						{
 							if(ControlMouseCursor)
 							{
 								MouseControl.MouseClick();
 							}
-						}
+						}*/
 						
 						foreach(KinectGestures.GestureListenerInterface listener in gestureListeners)
 						{

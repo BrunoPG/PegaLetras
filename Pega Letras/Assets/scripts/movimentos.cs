@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
+using TMPro;
 public class movimentos : MonoBehaviour
 {
     public Button botao1;
@@ -30,8 +30,11 @@ public class movimentos : MonoBehaviour
         // dont run Update() if there is no user
         KinectManager kinectManager = KinectManager.Instance;
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
+        {
+            if (gestureListener != null)
+                gestureListener.ContarTempo("");
             return;
-
+        }
 
         if (gestureListener.IsSwipeLeft())
             movimentaEsquerta();
@@ -132,6 +135,7 @@ public class movimentos : MonoBehaviour
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("Historia");
         this.enabled = false;
+        Destroy(this);
     }
 
     public void SairJogo()

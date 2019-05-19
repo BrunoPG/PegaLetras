@@ -17,7 +17,7 @@ namespace Neurorehab.Scripts.Devices.Abstracts
         /// <summary>
         /// Number of samples to be used for the smoothing.
         /// </summary>
-        [Range(1, 15)]
+        [Range(1, 30)]
         [SerializeField]
         [Tooltip("Number of samples to be used for the smoothing ")]
         private int _numberOfSamples = 1;
