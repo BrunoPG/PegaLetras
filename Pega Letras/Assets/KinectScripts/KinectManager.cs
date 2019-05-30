@@ -11,11 +11,13 @@ using System.Text;
 public class KinectManager : MonoBehaviour
 {
 	public enum Smoothing : int { None, Default, Medium, Aggressive }
+
+	//public static string[] palavra = ['A', 'L', 'E', 'X'];
 	
 	
 	// Public Bool to determine how many players there are. Default of one user.
 	public bool TwoUsers = false;
-	
+
 //	// Public Bool to determine if the sensor is used in near mode.
 //	public bool NearMode = false;
 
@@ -870,13 +872,13 @@ public class KinectManager : MonoBehaviour
 				(ComputeColorMap ? KinectWrapper.NuiInitializeFlags.UsesColor : 0));
             if (hr != 0)
 			{
-            	throw new Exception("NuiInitialize Failed");
+            	Debug.Log("Não foi possivel inicializar o kinect");
 			}
 			
 			hr = KinectWrapper.NuiSkeletonTrackingEnable(IntPtr.Zero, 8);  // 0, 12,8
 			if (hr != 0)
 			{
-				throw new Exception("Cannot initialize Skeleton Data");
+				Debug.Log("Não foi possivel inicializar o Skeleto");
 			}
 			
 			depthStreamHandle = IntPtr.Zero;
@@ -1231,13 +1233,13 @@ public class KinectManager : MonoBehaviour
 				{
 					if(gestureData.complete)
 					{
-					/*	if(gestureData.gesture == KinectGestures.Gestures.Click)
+						if(gestureData.gesture == KinectGestures.Gestures.Click)
 						{
 							if(ControlMouseCursor)
 							{
 								MouseControl.MouseClick();
 							}
-						}*/
+						}
 						
 						foreach(KinectGestures.GestureListenerInterface listener in gestureListeners)
 						{
