@@ -18,6 +18,8 @@ public class PalavrasJogo : MonoBehaviour
     public TextMeshProUGUI palavra;
     public TextMeshProUGUI contagem;
     public TextMeshProUGUI TxtVidas;
+   // public GameObject mainCamera;
+    public random_positions randomPosition;
     Image img;
     int index;
     bool iniciou, movimentaImg;
@@ -46,6 +48,8 @@ public class PalavrasJogo : MonoBehaviour
         movimentaImg = false;
         tipo = TIPO_IMG.IMG_G;
         vidas = 5;
+
+        //randomPosition = mainCamera.GetComponent<random_positions>();
     }
 
     private void FimDeJogo()
@@ -73,12 +77,14 @@ public class PalavrasJogo : MonoBehaviour
             {
                 contagem.GetComponent<TextMeshProUGUI>().text = "";
                 iniciou = true;
+                randomPosition.config.pause = false;
+                tempo = 5;
             }
         }       
         else
         {
             if (letrasEncontradas.Equals(""))
-            {
+            {                
                 if (!movimentaImg)
                 {
                     index = ordem[ordem.Count - 1];
@@ -96,7 +102,8 @@ public class PalavrasJogo : MonoBehaviour
 
             if (movimentaImg)
             {
-                tmpMovImg -= Time.deltaTime;
+                randomPosition.config.pause = true;
+                tmpMovImg -= Time.deltaTime;                
                 if (tmpMovImg <= 0)
                 {
                     if (tipo == TIPO_IMG.IMG_G)
@@ -113,6 +120,8 @@ public class PalavrasJogo : MonoBehaviour
                     }
                 }
             }
+            else{ randomPosition.config.pause = false; }
+               
 
 
 
@@ -143,17 +152,17 @@ public class PalavrasJogo : MonoBehaviour
         }
     }
 
-    public void SetLetra(Text letra)
+    public void SetLetra(string letra)
     {
-        if (!letra.text.Equals(""))
-            if (!EscreveLetra(letra.text.ToUpper()))
+        if (!letra.Equals(""))
+            if (!EscreveLetra(letra.ToUpper()) && vidas > 0)
             {
                 vidas = vidas - 1;
             }
     }
 
     private void trocarImagem(int idx)
-    {
+    {        
         if (idx <= imagens.Length)
         {
             string text = "";
@@ -165,6 +174,7 @@ public class PalavrasJogo : MonoBehaviour
                 }
                 letrasEncontradas = text;
                 palavra.GetComponent<TextMeshProUGUI>().text = letrasEncontradas;
+                randomPosition.SetPalavra(palavras[idx]);
             }            
             index = idx;
         }

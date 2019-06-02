@@ -6,6 +6,7 @@ public class hand_left : MonoBehaviour
 {
 	[SerializeField]
 	private ParticleSystem Particula;
+    public PalavrasJogo Scriptjogo;
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandLeft;
 	
 
@@ -39,7 +40,7 @@ public class hand_left : MonoBehaviour
 					// output the joint position for easy tracking
 					Vector3 jointPos = manager.GetJointPosition(userId, (int)joint);
 					jointPos.Set(jointPos.x * 2, jointPos.y * 2, jointPos.z);
-					transform.position = jointPos;
+					transform.localPosition = jointPos;
 
 				}
 			}
@@ -48,9 +49,9 @@ public class hand_left : MonoBehaviour
 	void OnCollisionEnter (Collision col)
     {
 		ParticleSystem obj;
-		obj = (ParticleSystem) Instantiate(Particula, this.transform.position, Quaternion.identity);
-		
-		obj.Play();
+		obj = (ParticleSystem) Instantiate(Particula, this.transform.localPosition, Quaternion.identity);
+        Scriptjogo.SetLetra(col.gameObject.name);
+        obj.Play();
 		Destroy(col.gameObject,1f);
 		Destroy(obj, 1f); 
 	

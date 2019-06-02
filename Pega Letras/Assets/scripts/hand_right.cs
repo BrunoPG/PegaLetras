@@ -6,8 +6,9 @@ public class hand_right : MonoBehaviour
 {
 	[SerializeField]
 	private ParticleSystem Particula;
+    public PalavrasJogo Scriptjogo;
     // the joint we want to track
-	public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
+    public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
 	
 
     // joint position at the moment, in Kinect coordinates
@@ -15,8 +16,8 @@ public class hand_right : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
+
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class hand_right : MonoBehaviour
 					Vector3 jointPos = manager.GetJointPosition(userId, (int)joint);
 					//aumentar tamanho do movimento e rapides 
 					jointPos.Set(jointPos.x * 2, jointPos.y * 2, jointPos.z);
-					transform.position = jointPos;
+					transform.localPosition = jointPos;
 
 				}
 			}
@@ -51,11 +52,14 @@ public class hand_right : MonoBehaviour
     {
 
 		ParticleSystem obj;
-		obj = (ParticleSystem) Instantiate(Particula, this.transform.position, Quaternion.identity);
-		
-		obj.Play();
+		obj = (ParticleSystem) Instantiate(Particula, this.transform.localPosition, Quaternion.identity);
+        Scriptjogo.SetLetra(col.gameObject.name);
+
+        obj.Play();
 		Destroy(col.gameObject,1f);
 		Destroy(obj, 1f);
-	
+
+        
+
     }
 }
