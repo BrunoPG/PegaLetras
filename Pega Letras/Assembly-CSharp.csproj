@@ -227,6 +227,7 @@
     <Compile Include="Assets\Neurorehab\SimpleFileBrowser\Scripts\GracesGames\FileBrowser.cs" />
     <Compile Include="Assets\Neurorehab\SimpleFileBrowser\Scripts\GracesGames\FiniteStack.cs" />
     <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
+    <Compile Include="Assets\PalavrasJogo.cs" />
     <Compile Include="Assets\scripts\color.cs" />
     <Compile Include="Assets\scripts\configHitoria.cs" />
     <Compile Include="Assets\scripts\Configuracao.cs" />

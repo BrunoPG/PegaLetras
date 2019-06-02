@@ -139,14 +139,15 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	{
 		if (gesture == KinectGestures.Gestures.Click)
         {
-
-            if (progress < 0.5)
+            if (progress < 0.3 )
+                ContarTempo("");
+            else if (progress < 0.43)
                 ContarTempo("5");
-            else if (progress < 0.6)
+            else if (progress < 0.57)
                 ContarTempo("4");
-            else if (progress < 0.7)
+            else if (progress < 0.71)
                 ContarTempo("3");
-            else if (progress < 0.8)
+            else if (progress < 0.85)
                 ContarTempo("2");
             else if (progress < 0.99)
                 ContarTempo("1");
