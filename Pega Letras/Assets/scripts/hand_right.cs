@@ -54,8 +54,8 @@ public class hand_right : MonoBehaviour
 		obj = (ParticleSystem) Instantiate(Particula, this.transform.position, Quaternion.identity);
 		
 		obj.Play();
-		Destroy(col.gameObject,0f);
-		Destroy(obj, 0f);
+		Destroy(col.gameObject,1f);
+		Destroy(obj, 1f);
 	
     }
 }
