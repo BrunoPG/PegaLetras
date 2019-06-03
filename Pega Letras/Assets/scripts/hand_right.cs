@@ -7,6 +7,7 @@ public class hand_right : MonoBehaviour
 	[SerializeField]
 	private ParticleSystem Particula;
     public PalavrasJogo Scriptjogo;
+    public config configuracao;
     // the joint we want to track
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
 	
@@ -53,10 +54,13 @@ public class hand_right : MonoBehaviour
 
 		ParticleSystem obj;
 		obj = (ParticleSystem) Instantiate(Particula, this.transform.localPosition, Quaternion.identity);
-        Scriptjogo.SetLetra(col.gameObject.name);
+        if (Scriptjogo.SetLetra(col.gameObject.name))
+            obj.GetComponent<Renderer>().material = configuracao.PAcerto;
+        else
+            obj.GetComponent<Renderer>().material = configuracao.PErro;
 
-        obj.Play();
-		Destroy(col.gameObject,1f);
+        Destroy(col.gameObject, 0.5f);
+        obj.Play();		
 		Destroy(obj, 1f);
 
         

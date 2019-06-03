@@ -8,24 +8,17 @@ public class random_positions : MonoBehaviour
     private float InstantiationTimer = 0.5f;
     public config config;
     // Start is called before the first frame update
-    private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";
-    string letrasCorretas;
+    private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";    
     int cont;
     void Start()
     {
-        config.pause = true;
-        letrasCorretas = "";
-    }
-
-    public void SetPalavra(string palavra)
-    {        
-            letrasCorretas = palavra;
-    }
+        config.pause = true;        
+    }    
 
     // Update is called once per frame
     void Update()
     {
-        if (config.pause)
+        if (config.pause || config.trocaImg)
             return;  
             InstantiationTimer -= Time.deltaTime;
             if (InstantiationTimer <= 0)
@@ -38,8 +31,8 @@ public class random_positions : MonoBehaviour
                 }
                 else
                 {
-                    int p = Random.Range(0, this.letrasCorretas.Length - 1);
-                    index = letras.IndexOf(letrasCorretas[p]);                    
+                    int p = Random.Range(0, config.letrasFaltantes.Count- 1);
+                    index = letras.IndexOf(config.letrasFaltantes[p]);                    
                     cont = 0;
                 }
                    
@@ -47,10 +40,11 @@ public class random_positions : MonoBehaviour
                 {
                     float eixoX = Random.Range(-1f, 1f); 
                     float eixoY = Random.Range(2.5f, 3.3f);
+                    
                     char let = this.letras[index];
                     GameObject letra = (GameObject)Instantiate(Resources.Load("Prefabs/" + let), new Vector3(eixoX, eixoY, this.transform.localPosition.z + 15f), Quaternion.identity);
-                    letra.transform.Rotate(0, 180, 0);
-                    letra.GetComponent<movement>().config = this.GetComponent<config>();
+                    letra.transform.Rotate(0, 180, 0);                    
+                    letra.GetComponent<movement>().config = this.GetComponent<config>();                    
                     InstantiationTimer = 2f;
                 }
             }

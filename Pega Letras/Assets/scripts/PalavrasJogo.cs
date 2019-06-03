@@ -18,7 +18,7 @@ public class PalavrasJogo : MonoBehaviour
     public TextMeshProUGUI palavra;
     public TextMeshProUGUI contagem;
     public TextMeshProUGUI TxtVidas;
-   // public GameObject mainCamera;
+    public config config;
     public random_positions randomPosition;
     Image img;
     int index;
@@ -132,6 +132,7 @@ public class PalavrasJogo : MonoBehaviour
             img.sprite = gameOver;
             aumentarImagem();
             movimentaImg = false;
+            config.pause = true;
         }
         TxtVidas.text = vidas+"";
 
@@ -152,17 +153,29 @@ public class PalavrasJogo : MonoBehaviour
         }
     }
 
-    public void SetLetra(string letra)
+    public bool SetLetra(string letra)
     {
         if (!letra.Equals(""))
-            if (!EscreveLetra(letra.ToUpper()) && vidas > 0)
+            if (EscreveLetra(letra.ToUpper()))
             {
-                vidas = vidas - 1;
+                config.PlayAcertou();
+                return true;
             }
+            else
+            {
+                if (vidas > 0)
+                {
+                    config.PlayErrou();
+                    vidas = vidas - 1;
+                }
+                return false;
+            }
+        return false;
     }
 
     private void trocarImagem(int idx)
-    {        
+    {
+        config.trocaImg = true;
         if (idx <= imagens.Length)
         {
             string text = "";
@@ -171,10 +184,10 @@ public class PalavrasJogo : MonoBehaviour
                 for (int i =0; i <= palavras[idx].Length - 1; i++)
                 {
                     text = text + "_";
+                    config.letrasFaltantes.Add(palavras[index][i] + "");
                 }
                 letrasEncontradas = text;
-                palavra.GetComponent<TextMeshProUGUI>().text = letrasEncontradas;
-                randomPosition.SetPalavra(palavras[idx]);
+                palavra.GetComponent<TextMeshProUGUI>().text = letrasEncontradas;                
             }            
             index = idx;
         }
@@ -186,12 +199,16 @@ public class PalavrasJogo : MonoBehaviour
         string txtSemAcento = tirarAcento(palavras[index]);
         if (txtSemAcento.Contains(letra+""))
         {
+            
             string Novotext = "";            
             for (int i = 0; i <= txtSemAcento.Length -1; i++)
             {
                 string letEncSemAcento = tirarAcento(letrasEncontradas);
                 if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_"))
+                {
                     Novotext = Novotext + palavras[index][i];
+                    config.letrasFaltantes.Remove(palavras[index][i]+"");
+                }
                 else if ((letEncSemAcento[i]+"").Equals(txtSemAcento[i]+""))
                     Novotext = Novotext + palavras[index][i];
                 else Novotext = Novotext + "_";
@@ -202,7 +219,7 @@ public class PalavrasJogo : MonoBehaviour
             return true;
         }
         else
-        {
+        {            
             return false;
         }
         
@@ -227,6 +244,7 @@ public class PalavrasJogo : MonoBehaviour
         this.img.transform.localPosition = new Vector3(310, 60, 0);
         this.img.transform.localScale = new Vector3(1.2f, 1, 1);
         tipo = TIPO_IMG.IMG_P;
+        config.trocaImg = false;
     }
 
     private void aumentarImagem()

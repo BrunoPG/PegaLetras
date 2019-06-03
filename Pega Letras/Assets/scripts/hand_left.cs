@@ -8,7 +8,7 @@ public class hand_left : MonoBehaviour
 	private ParticleSystem Particula;
     public PalavrasJogo Scriptjogo;
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandLeft;
-	
+    public config configuracao;
 
     // joint position at the moment, in Kinect coordinates
 	public Vector3 outputPosition;
@@ -48,11 +48,14 @@ public class hand_left : MonoBehaviour
     }
 	void OnCollisionEnter (Collision col)
     {
-		ParticleSystem obj;
+		ParticleSystem obj;        
 		obj = (ParticleSystem) Instantiate(Particula, this.transform.localPosition, Quaternion.identity);
-        Scriptjogo.SetLetra(col.gameObject.name);
-        obj.Play();
-		Destroy(col.gameObject,1f);
+        if (Scriptjogo.SetLetra(col.gameObject.name))
+            obj.GetComponent<Renderer>().material = configuracao.PAcerto;
+        else
+            obj.GetComponent<Renderer>().material = configuracao.PErro;
+        Destroy(col.gameObject, 0.5f);
+        obj.Play();		
 		Destroy(obj, 1f); 
 	
     }
