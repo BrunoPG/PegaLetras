@@ -38,8 +38,8 @@ public class random_positions : MonoBehaviour
                    
                 if (index >= 0 && index <= this.letras.Length)
                 {
-                    float eixoX = Random.Range(-1f, 1f); 
-                    float eixoY = Random.Range(2.5f, 3.3f);
+                    float eixoX = Random.Range(-1f, 1.2f); 
+                    float eixoY = Random.Range(2.5f, 3.7f);
                     
                     char let = this.letras[index];
                     GameObject letra = (GameObject)Instantiate(Resources.Load("Prefabs/" + let), new Vector3(eixoX, eixoY, this.transform.localPosition.z + 15f), Quaternion.identity);

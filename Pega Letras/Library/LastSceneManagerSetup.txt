@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/scenelettters.unity
+- path: Assets/scene/casa.unity
   isLoaded: 1
   isActive: 1
