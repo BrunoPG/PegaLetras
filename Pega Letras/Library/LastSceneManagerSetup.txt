@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/casa.unity
+- path: Assets/scene/bolha.unity
   isLoaded: 1
   isActive: 1

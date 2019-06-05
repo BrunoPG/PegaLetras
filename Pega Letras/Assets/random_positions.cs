@@ -5,7 +5,7 @@ using UnityEngine;
 public class random_positions : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float InstantiationTimer = 0.5f;
+    private float InstantiationTimer = 1.2f;
     public config config;
     // Start is called before the first frame update
     private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";    
