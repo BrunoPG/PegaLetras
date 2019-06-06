@@ -280,3 +280,4 @@ D:\Projetos\Unity\PegaLetras\Pega Letras\Temp\bin\Debug\Unity.PackageManagerUI.E
 D:\Projetos\Unity\PegaLetras\Pega Letras\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
 D:\Projetos\Unity\PegaLetras\Pega Letras\Temp\bin\Debug\Unity.TextMeshPro.pdb
 D:\Projetos\Unity\PegaLetras\Pega Letras\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb
+D:\Projetos\Unity\PegaLetras\Pega Letras\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

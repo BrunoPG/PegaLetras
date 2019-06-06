@@ -202,7 +202,7 @@ public class PalavrasJogo : MonoBehaviour
             
             string Novotext = "";            
             for (int i = 0; i <= txtSemAcento.Length -1; i++)
-            {
+            {                
                 string letEncSemAcento = tirarAcento(letrasEncontradas);
                 if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_"))
                 {

@@ -123,7 +123,7 @@ public class movimentos : MonoBehaviour
             ScripVideoSelcionado.indexVideo = 4;
         else if (selecionado == botao6)
             ScripVideoSelcionado.indexVideo = 5;
-        //ScripVideoSelcionado.vide = selecionado.GetComponent("VideoPlayer") as VideoPlayer;
+        
         if (selecionado != null)
            ChamaCenaMenuHistoria();        
        

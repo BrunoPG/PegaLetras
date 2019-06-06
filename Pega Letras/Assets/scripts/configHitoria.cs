@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class configHitoria : MonoBehaviour
 {
-    private GestureListener gestureListener;
+    private GestureListener gestureListener;    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +34,11 @@ public class configHitoria : MonoBehaviour
 
     void pular()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
+        if (ScripVideoSelcionado.indexVideo == 1)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
+            }
+        
 
         this.enabled = false;
         Destroy(this);

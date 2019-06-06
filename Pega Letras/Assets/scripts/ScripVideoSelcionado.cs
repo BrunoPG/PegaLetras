@@ -9,6 +9,7 @@ public class ScripVideoSelcionado : MonoBehaviour
     public List<VideoPlayer> Videos = new List<VideoPlayer>();
     public static VideoPlayer vide;
     public static int indexVideo;
+    private VideoPlayer videoSelecionado;
    // public AudioSource audio;
 
 
@@ -20,7 +21,7 @@ public class ScripVideoSelcionado : MonoBehaviour
 
     IEnumerator PlayVideo()
     {
-        VideoPlayer videoSelecionado = Videos[indexVideo];
+        videoSelecionado = Videos[indexVideo];
         for (int i = 0; i < Videos.Count; i++)
         {
             Videos[i].enabled = false;
@@ -44,8 +45,12 @@ public class ScripVideoSelcionado : MonoBehaviour
 
     void Update()
     {
-           
-           
+        if (videoSelecionado.isPaused)
+        if (ScripVideoSelcionado.indexVideo == 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
+        }
+
     }
 
 }

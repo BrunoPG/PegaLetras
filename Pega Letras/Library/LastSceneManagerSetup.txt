@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/bolha.unity
+- path: Assets/scene/trem.unity
   isLoaded: 1
   isActive: 1
