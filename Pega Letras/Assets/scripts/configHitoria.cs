@@ -22,7 +22,7 @@ public class configHitoria : MonoBehaviour
          if (gestureListener.IsWave())
             voltar();
         else if (gestureListener.IsJump())
-            pular();       
+            jogar();              
     }
 
     void voltar()
@@ -32,13 +32,20 @@ public class configHitoria : MonoBehaviour
         Destroy(this);
     }
 
-    void pular()
+    public void jogar()
     {
-        if (ScripVideoSelcionado.indexVideo == 1)
-            {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
-            }
-        
+        if (ScripVideoSelcionado.indexVideo == 0)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("a_porta");
+        else if (ScripVideoSelcionado.indexVideo == 1)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("trem");
+        else if (ScripVideoSelcionado.indexVideo == 1)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("casa_ruinas");
+        else if (ScripVideoSelcionado.indexVideo == 1)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("bolhas");
+        else if (ScripVideoSelcionado.indexVideo == 1)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("ocorrencia");
+        else if (ScripVideoSelcionado.indexVideo == 1)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("paciente");
 
         this.enabled = false;
         Destroy(this);

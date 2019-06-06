@@ -10,7 +10,7 @@ public class ScripVideoSelcionado : MonoBehaviour
     public static VideoPlayer vide;
     public static int indexVideo;
     private VideoPlayer videoSelecionado;
-   // public AudioSource audio;
+    public configHitoria historia;
 
 
     // Start is called before the first frame update
@@ -36,20 +36,17 @@ public class ScripVideoSelcionado : MonoBehaviour
             break;
 
         }
-        //audio = videoSelecionado.GetTargetAudioSource(0);
+        
         videoSelecionado.EnableAudioTrack(1, true);
         imagem.texture = videoSelecionado.texture;
         videoSelecionado.Play();
-        //audio.Play();
+        
     }
 
     void Update()
     {
         if (videoSelecionado.isPaused)
-        if (ScripVideoSelcionado.indexVideo == 0)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("scenelettters");
-        }
+            historia.jogar();
 
     }
 

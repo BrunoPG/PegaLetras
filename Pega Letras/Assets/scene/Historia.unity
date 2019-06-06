@@ -544,10 +544,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TwoUsers: 0
-  ComputeUserMap: 1
-  ComputeColorMap: 1
-  DisplayUserMap: 1
-  DisplayColorMap: 1
+  ComputeUserMap: 0
+  ComputeColorMap: 0
+  DisplayUserMap: 0
+  DisplayColorMap: 0
   DisplaySkeletonLines: 0
   DisplayMapsWidthPercent: 20
   SensorHeight: 1
@@ -10864,6 +10864,7 @@ MonoBehaviour:
   - {fileID: 425342502}
   - {fileID: 1247599085}
   - {fileID: 352273215}
+  historia: {fileID: 29354713}
 --- !u!82 &1014223750
 AudioSource:
   m_ObjectHideFlags: 0
