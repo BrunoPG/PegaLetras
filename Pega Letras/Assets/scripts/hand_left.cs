@@ -8,7 +8,7 @@ public class hand_left : MonoBehaviour
 	private ParticleSystem Particula;
     public PalavrasJogo Scriptjogo;
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandLeft;
-    public config configuracao;
+    public configJogo configuracao;
 
     // joint position at the moment, in Kinect coordinates
 	public Vector3 outputPosition;

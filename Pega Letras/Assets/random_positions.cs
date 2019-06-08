@@ -6,7 +6,7 @@ public class random_positions : MonoBehaviour
 {
     // Start is called before the first frame update
     private float InstantiationTimer = 1.2f;
-    public config config;
+    public configJogo config;
     // Start is called before the first frame update
     private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";    
     int cont;
@@ -44,7 +44,7 @@ public class random_positions : MonoBehaviour
                     char let = this.letras[index];
                     GameObject letra = (GameObject)Instantiate(Resources.Load("Prefabs/" + let), new Vector3(eixoX, eixoY, this.transform.localPosition.z + 15f), Quaternion.identity);
                     letra.transform.Rotate(0, 180, 0);                    
-                    letra.GetComponent<movement>().config = this.GetComponent<config>();                    
+                    letra.GetComponent<movement>().config = this.GetComponent<configJogo>();                    
                     InstantiationTimer = 2f;
                 }
             }

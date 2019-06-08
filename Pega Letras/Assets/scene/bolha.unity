@@ -601,19 +601,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palavras:
-  - "\xC1RVORE"
-  - PORTA
-  - TREM
   - BOLHA
-  - BOLA
-  - BALA
+  - GALHO
+  - ROLHA
+  - "M\xC3O"
+  - "SAB\xC3O"
+  - MENINO
+  - CHUVA
   imagens:
-  - {fileID: 21300000, guid: 765ffec7fbeb8ec42b7aa96787e1d38c, type: 3}
-  - {fileID: 21300000, guid: d4ce602a2af51714485ae13ce9510e0d, type: 3}
-  - {fileID: 21300000, guid: 7737208a504ffa34c9d2ffc1a811a38a, type: 3}
   - {fileID: 21300000, guid: 0418a6ecbaa726841a8f8b9eaa5c14c1, type: 3}
-  - {fileID: 21300000, guid: cbfef81864784bb4c8d731c88b7be8cc, type: 3}
-  - {fileID: 21300000, guid: 5cbaec09f3b20714fac61bd46b2a85f5, type: 3}
+  - {fileID: 21300000, guid: 4e269a7d3b1e95a499621bca7ddc2b64, type: 3}
+  - {fileID: 21300000, guid: 0e3900ffc4519b34693a0b4860fc47b5, type: 3}
+  - {fileID: 21300000, guid: e5587e918b8f5a74fa3e3acef641b3c8, type: 3}
+  - {fileID: 21300000, guid: efa9607467ad23b4ea76860cb4739a1d, type: 3}
+  - {fileID: 21300000, guid: d29ef553b3a05a946b4291836eb4e119, type: 3}
+  - {fileID: 21300000, guid: 47943c3ee8b6ca2409af96b6b5d535db, type: 3}
   gameOver: {fileID: 21300000, guid: 0ac48c25e95153b4fabec25c848439db, type: 3}
   palavra: {fileID: 1957218929}
   contagem: {fileID: 1406950808}
@@ -1712,7 +1714,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794557351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6ad5dae9b809547b04770603e4b74e, type: 3}
+  m_Script: {fileID: 11500000, guid: b2edae2acb6efb649902a362316aab1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 0
@@ -1721,8 +1723,8 @@ MonoBehaviour:
   somAmbiente: {fileID: 1794557357}
   ganhou: {fileID: 0}
   perdeu: {fileID: 0}
-  PErro: {fileID: 2100000, guid: ff70aa1afc62ec443b61d76d0c9d1794, type: 2}
-  PAcerto: {fileID: 2100000, guid: e99207beb9075ab4a9f863482553b62a, type: 2}
+  PErro: {fileID: 0}
+  PAcerto: {fileID: 0}
   trocaImg: 0
   letrasFaltantes: []
 --- !u!82 &1794557357
@@ -2667,6 +2669,71 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1736946468446636340, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468446636340, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: imagens.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: config
+      value: 
+      objectReference: {fileID: 1794557356}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: randomPosition
+      value: 
+      objectReference: {fileID: 1794557355}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[0]
+      value: BOLHA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[1]
+      value: GALHO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[2]
+      value: ROLHA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[3]
+      value: "M\xC3O"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[4]
+      value: "SAB\xC3O"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[5]
+      value: MENINO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
+        type: 3}
+      propertyPath: palavras.Array.data[6]
+      value: CHUVA
+      objectReference: {fileID: 0}
     - target: {fileID: 1736946467731085865, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
         type: 3}
       propertyPath: m_Name
@@ -2782,16 +2849,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
-        type: 3}
-      propertyPath: config
-      value: 
-      objectReference: {fileID: 1794557356}
-    - target: {fileID: 1736946468306000215, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
-        type: 3}
-      propertyPath: randomPosition
-      value: 
-      objectReference: {fileID: 1794557355}
     - target: {fileID: 1736946467582439428, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -2831,16 +2888,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.x
       value: -283.88995
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736946468446636340, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736946468446636340, guid: f1a4f5ed2383c7c4f83da69f11ae7376,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a4f5ed2383c7c4f83da69f11ae7376, type: 3}

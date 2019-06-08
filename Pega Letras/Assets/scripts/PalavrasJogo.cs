@@ -18,7 +18,7 @@ public class PalavrasJogo : MonoBehaviour
     public TextMeshProUGUI palavra;
     public TextMeshProUGUI contagem;
     public TextMeshProUGUI TxtVidas;
-    public config config;
+    public configJogo config;
     public random_positions randomPosition;
     Image img;
     int index;
@@ -183,8 +183,13 @@ public class PalavrasJogo : MonoBehaviour
             if (letrasEncontradas.Equals("")) { 
                 for (int i =0; i <= palavras[idx].Length - 1; i++)
                 {
-                    text = text + "_";
-                    config.letrasFaltantes.Add(palavras[index][i] + "");
+                    if (palavras[idx][i].Equals(" "))
+                        text = text + " ";
+                    else
+                    {
+                        text = text + "_";
+                        config.letrasFaltantes.Add(palavras[index][i] + "");
+                    }
                 }
                 letrasEncontradas = text;
                 palavra.GetComponent<TextMeshProUGUI>().text = letrasEncontradas;                

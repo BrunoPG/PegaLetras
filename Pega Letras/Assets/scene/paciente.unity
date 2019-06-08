@@ -536,19 +536,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palavras:
-  - "\xC1RVORE"
-  - PORTA
-  - TREM
-  - BOLHA
-  - BOLA
-  - BALA
+  - "\xD3CULOS"
+  - DOUTOR
+  - JANELA
+  - "C\xC9U"
+  - "AVI\xC3O"
+  - DISCO VOADOR
   imagens:
-  - {fileID: 21300000, guid: 765ffec7fbeb8ec42b7aa96787e1d38c, type: 3}
-  - {fileID: 21300000, guid: d4ce602a2af51714485ae13ce9510e0d, type: 3}
-  - {fileID: 21300000, guid: 7737208a504ffa34c9d2ffc1a811a38a, type: 3}
-  - {fileID: 21300000, guid: 0418a6ecbaa726841a8f8b9eaa5c14c1, type: 3}
-  - {fileID: 21300000, guid: cbfef81864784bb4c8d731c88b7be8cc, type: 3}
-  - {fileID: 21300000, guid: 5cbaec09f3b20714fac61bd46b2a85f5, type: 3}
+  - {fileID: 21300000, guid: 0db079432f9dad44f98cc30dbf889867, type: 3}
+  - {fileID: 21300000, guid: b067e61d4309bc841b0e3befe89160d4, type: 3}
+  - {fileID: 21300000, guid: 48320edf0a3e10f429481c08dfbd5d9f, type: 3}
+  - {fileID: 21300000, guid: 454ed0318079ac8429f664ccbbc6617f, type: 3}
+  - {fileID: 21300000, guid: 2cdd4e87126e78341b049386b1d02801, type: 3}
+  - {fileID: 21300000, guid: 34f2f5c7c52fd844b8baffdd7d1fb4dd, type: 3}
   gameOver: {fileID: 21300000, guid: 0ac48c25e95153b4fabec25c848439db, type: 3}
   palavra: {fileID: 321033114}
   contagem: {fileID: 745098677}
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794557351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6ad5dae9b809547b04770603e4b74e, type: 3}
+  m_Script: {fileID: 11500000, guid: b2edae2acb6efb649902a362316aab1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 0
@@ -1629,8 +1629,8 @@ MonoBehaviour:
   somAmbiente: {fileID: 1794557357}
   ganhou: {fileID: 0}
   perdeu: {fileID: 0}
-  PErro: {fileID: 2100000, guid: ff70aa1afc62ec443b61d76d0c9d1794, type: 2}
-  PAcerto: {fileID: 2100000, guid: e99207beb9075ab4a9f863482553b62a, type: 2}
+  PErro: {fileID: 0}
+  PAcerto: {fileID: 0}
   trocaImg: 0
   letrasFaltantes: []
 --- !u!82 &1794557357

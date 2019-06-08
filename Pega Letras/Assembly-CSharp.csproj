@@ -239,7 +239,6 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\scripts\collide_explode.cs" />
     <Compile Include="Assets\scripts\color.cs" />
-    <Compile Include="Assets\scripts\config.cs" />
     <Compile Include="Assets\scripts\configHitoria.cs" />
     <Compile Include="Assets\scripts\hand.cs" />
     <Compile Include="Assets\scripts\hand_left.cs" />

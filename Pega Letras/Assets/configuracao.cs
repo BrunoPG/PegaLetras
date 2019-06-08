@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class config : MonoBehaviour
+public class configJogo : MonoBehaviour
 {
     public bool pause;
     public AudioSource certo, errado, somAmbiente, ganhou, perdeu;
@@ -22,7 +22,7 @@ public class config : MonoBehaviour
         if (!somAmbiente.isPlaying)
         {
             somAmbiente.Play();
-        }
+        }       
     }
 
     public void PlayErrou()
@@ -36,4 +36,7 @@ public class config : MonoBehaviour
         if (!pause)
             certo.Play();
     }
+
+    
+
 }

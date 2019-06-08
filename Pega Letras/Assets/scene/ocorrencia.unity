@@ -536,19 +536,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palavras:
-  - "\xC1RVORE"
-  - PORTA
-  - TREM
-  - BOLHA
-  - BOLA
-  - BALA
+  - MULHER
+  - HOMEM
+  - CADEIRA
+  - MESA
+  - FLORES
+  - "REL\xD3GIO"
+  - "L\xC2MPADA"
+  - LIVROS
+  - SAPATOS
+  - GRAVATAS
+  - CAMISAS
   imagens:
-  - {fileID: 21300000, guid: 765ffec7fbeb8ec42b7aa96787e1d38c, type: 3}
-  - {fileID: 21300000, guid: d4ce602a2af51714485ae13ce9510e0d, type: 3}
-  - {fileID: 21300000, guid: 7737208a504ffa34c9d2ffc1a811a38a, type: 3}
-  - {fileID: 21300000, guid: 0418a6ecbaa726841a8f8b9eaa5c14c1, type: 3}
-  - {fileID: 21300000, guid: cbfef81864784bb4c8d731c88b7be8cc, type: 3}
-  - {fileID: 21300000, guid: 5cbaec09f3b20714fac61bd46b2a85f5, type: 3}
+  - {fileID: 21300000, guid: 399990d6d71fa344eb6b3be543d4ca52, type: 3}
+  - {fileID: 21300000, guid: 54572812f3df59a49bbaa777b23b9a58, type: 3}
+  - {fileID: 21300000, guid: 79cc98f31ae9b2a45b42c32fed2b7b93, type: 3}
+  - {fileID: 21300000, guid: 4b893b55f8745b345be20a356258c48f, type: 3}
+  - {fileID: 21300000, guid: 9ac4e94698ab06c4482a0f001c6a10f4, type: 3}
+  - {fileID: 21300000, guid: ee49b5bdb672356419a7ccfa215cf200, type: 3}
+  - {fileID: 21300000, guid: 3afee6b1c6bd80a43a14448a617ad410, type: 3}
+  - {fileID: 21300000, guid: 9b440617a9cc9b345acea56a6cba8f8e, type: 3}
+  - {fileID: 21300000, guid: 191149b0b1d348f4494f527a2cd80605, type: 3}
+  - {fileID: 21300000, guid: d6bac4307de17aa4bb154060da2d6724, type: 3}
+  - {fileID: 21300000, guid: 4ec827760ce073f40999e8544cc0a887, type: 3}
   gameOver: {fileID: 21300000, guid: 0ac48c25e95153b4fabec25c848439db, type: 3}
   palavra: {fileID: 321033114}
   contagem: {fileID: 745098677}
@@ -1620,7 +1630,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794557351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6ad5dae9b809547b04770603e4b74e, type: 3}
+  m_Script: {fileID: 11500000, guid: b2edae2acb6efb649902a362316aab1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 0
@@ -1934,6 +1944,7 @@ GameObject:
   - component: {fileID: 1938977269}
   - component: {fileID: 1938977268}
   - component: {fileID: 1938977267}
+  - component: {fileID: 1938977272}
   m_Layer: 0
   m_Name: kinect
   m_TagString: Untagged
@@ -1975,7 +1986,7 @@ MonoBehaviour:
   Player2Avatars: []
   Player1CalibrationPose: 0
   Player2CalibrationPose: 0
-  Player1Gestures: 
+  Player1Gestures: 14000000
   Player2Gestures: 
   MinTimeBetweenGestures: 0.7
   GestureListeners: []
@@ -2056,6 +2067,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1938977272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938977266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1b10ec54ed18a4a9fd436da22030b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GestureInfo: {fileID: 0}
+  Tempo: {fileID: 0}
 --- !u!1 &1982432335
 GameObject:
   m_ObjectHideFlags: 0

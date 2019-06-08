@@ -5,7 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     public bool shouldMove = false;
-    public config config;
+    public configJogo config;
     public MeshRenderer mesh;
     // Start is called before the first frame update
     void Start()

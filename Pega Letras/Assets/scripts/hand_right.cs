@@ -7,7 +7,7 @@ public class hand_right : MonoBehaviour
 	[SerializeField]
 	private ParticleSystem Particula;
     public PalavrasJogo Scriptjogo;
-    public config configuracao;
+    public configJogo configuracao;
     // the joint we want to track
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
 	

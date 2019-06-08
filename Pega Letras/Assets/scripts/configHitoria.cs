@@ -38,13 +38,13 @@ public class configHitoria : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("a_porta");
         else if (ScripVideoSelcionado.indexVideo == 1)
             UnityEngine.SceneManagement.SceneManager.LoadScene("trem");
-        else if (ScripVideoSelcionado.indexVideo == 1)
+        else if (ScripVideoSelcionado.indexVideo == 2)
             UnityEngine.SceneManagement.SceneManager.LoadScene("casa_ruinas");
-        else if (ScripVideoSelcionado.indexVideo == 1)
+        else if (ScripVideoSelcionado.indexVideo == 3)
             UnityEngine.SceneManagement.SceneManager.LoadScene("bolhas");
-        else if (ScripVideoSelcionado.indexVideo == 1)
+        else if (ScripVideoSelcionado.indexVideo == 4)
             UnityEngine.SceneManagement.SceneManager.LoadScene("ocorrencia");
-        else if (ScripVideoSelcionado.indexVideo == 1)
+        else if (ScripVideoSelcionado.indexVideo == 5)
             UnityEngine.SceneManagement.SceneManager.LoadScene("paciente");
 
         this.enabled = false;
