@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scene/MenuInicial.unity
+    path: Assets/scene/01MenuInicial.unity
     guid: 1efe14e7c2fca4441a47ff3ecc554fd3
   - enabled: 1
-    path: Assets/scene/Historia.unity
+    path: Assets/scene/02Historia.unity
     guid: f4c02c919a0855349b0bccb120bbdd82
   - enabled: 1
-    path: Assets/scene/bolha.unity
-    guid: d69c4a236b3cdc24e8a98bb0a4dac802
-  - enabled: 1
-    path: Assets/scene/a_porta.unity
+    path: Assets/scene/c1_aporta.unity
     guid: b0f26290d555bd249920168832714aaa
   - enabled: 1
-    path: Assets/scene/casa_ruinas.unity
-    guid: cc84f806d1bbfda4f8f62d02e2f0a70c
-  - enabled: 1
-    path: Assets/scene/trem.unity
+    path: Assets/scene/c2_trem.unity
     guid: 21f14cb01da1e6248887073572c92fa5
   - enabled: 1
-    path: Assets/scene/ocorrencia.unity
+    path: Assets/scene/c3_casa_ruinas.unity
+    guid: cc84f806d1bbfda4f8f62d02e2f0a70c
+  - enabled: 1
+    path: Assets/scene/c4_bolha.unity
+    guid: d69c4a236b3cdc24e8a98bb0a4dac802
+  - enabled: 1
+    path: Assets/scene/c5_ocorrencia.unity
     guid: d2635ca88252ad549bd47cbc8fcd85e0
   - enabled: 1
-    path: Assets/scene/paciente.unity
+    path: Assets/scene/c6_paciente.unity
     guid: 05de7221457e11540a543a72240879e0
   m_configObjects: {}

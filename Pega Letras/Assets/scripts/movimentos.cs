@@ -60,7 +60,7 @@ public class movimentos : MonoBehaviour
     public void ChamaCenaMenuHistoria()
     {
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Historia");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         this.enabled = false;
         Destroy(this);
     }

@@ -17,7 +17,7 @@ SceneListEnd?
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 993cc50eb65ea4e77724590e31191ca0 Assembly-CSharp.dll:.SimpleGestureListener
 21be25811ed80c852a29100601d1a8b8 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.TiltShift
-d7393f8b128f1ce17b0bd479f262c080 Assembly-CSharp.dll:.random_positions
+7ddb6e5366ec60f3c42718a28aa0d78e Assembly-CSharp.dll:.random_positions
 88fd33343f9364483bddb9a06ba8422a Assembly-CSharp.dll:.hand
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -233,7 +233,7 @@ c933b2cffdb9d1429a103e9d63c523ef Assembly-CSharp-firstpass.dll:UnityStandardAsse
 96539fd6feebcbc9da75ce005fd446a9 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.NoiseAndGrain
 03b9ef2ed536e8d6280069f2195174da Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.SimpleActivatorMenu
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
-ab53f70bab906a62881cc7a0358b414f Assembly-CSharp.dll:.configJogo
+023a20e317857e2e7adfa9321a175eda Assembly-CSharp.dll:.configJogo
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 a8c33406fd5a44e89bd47fea3b45028f Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ColorCorrectionRamp
 f080a86a4a939dd08c0cc4f4f05e1e4e Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.Grayscale

@@ -35,17 +35,17 @@ public class configHitoria : MonoBehaviour
     public void jogar()
     {
         if (ScripVideoSelcionado.indexVideo == 0)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("a_porta");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         else if (ScripVideoSelcionado.indexVideo == 1)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("trem");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         else if (ScripVideoSelcionado.indexVideo == 2)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("casa_ruinas");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
         else if (ScripVideoSelcionado.indexVideo == 3)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("bolha");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
         else if (ScripVideoSelcionado.indexVideo == 4)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("ocorrencia");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
         else if (ScripVideoSelcionado.indexVideo == 5)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("paciente");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
 
         this.enabled = false;
         Destroy(this);

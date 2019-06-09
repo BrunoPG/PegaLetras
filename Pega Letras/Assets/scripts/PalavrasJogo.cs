@@ -54,7 +54,7 @@ public class PalavrasJogo : MonoBehaviour
 
     private void FimDeJogo()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         this.enabled = false;
         Destroy(this);
     }
@@ -204,6 +204,7 @@ public class PalavrasJogo : MonoBehaviour
 
     private bool EscreveLetra(string letra)
     {
+        bool achou = false;
         string txtSemAcento = tirarAcento(palavras[index]);
         if (txtSemAcento.Contains(letra+""))
         {
@@ -212,10 +213,11 @@ public class PalavrasJogo : MonoBehaviour
             for (int i = 0; i <= txtSemAcento.Length -1; i++)
             {                
                 string letEncSemAcento = tirarAcento(letrasEncontradas);
-                if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_"))
+                if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_") && !achou)
                 {
                     Novotext = Novotext + palavras[index][i];
                     config.letrasFaltantes.Remove(palavras[index][i]+"");
+                    achou = true;
                 }
                 else if ((letEncSemAcento[i]+"").Equals(txtSemAcento[i]+""))
                     Novotext = Novotext + palavras[index][i];

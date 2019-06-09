@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/a_porta.unity
+- path: Assets/scene/c4_bolha.unity
   isLoaded: 1
   isActive: 1

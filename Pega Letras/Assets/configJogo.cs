@@ -9,10 +9,15 @@ public class configJogo : MonoBehaviour
     public Material PErro, PAcerto;
     public bool trocaImg;
     public List<string> letrasFaltantes;
+    public float timerLetras = 0;
     // Start is called before the first frame update
     void Start()
     {
         letrasFaltantes = new List<string>();
+        if (timerLetras == 0)
+        {
+            timerLetras = 0.05f;
+        }
     }
 
     // Update is called once per frame
