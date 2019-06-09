@@ -2,14 +2,14 @@ Win64
 PlayerPath?
 D:/Projetos/Unity/Executavel PegaL/Pega Letras.exe
 SceneListBegin?
-Assets/scene/MenuInicial.unity
-Assets/scene/Historia.unity
-Assets/scene/bolha.unity
-Assets/scene/a_porta.unity
-Assets/scene/casa_ruinas.unity
-Assets/scene/trem.unity
-Assets/scene/ocorrencia.unity
-Assets/scene/paciente.unity
+Assets/scene/01MenuInicial.unity
+Assets/scene/02Historia.unity
+Assets/scene/c1_aporta.unity
+Assets/scene/c2_trem.unity
+Assets/scene/c3_casa_ruinas.unity
+Assets/scene/c4_bolha.unity
+Assets/scene/c5_ocorrencia.unity
+Assets/scene/c6_paciente.unity
 SceneListEnd?
 58bcab353245079613ff8ec50d554e46 Assembly-CSharp.dll:.hand_left
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -78,6 +78,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MenuInicial
 352455aaadb8c98ff36ead557753abfa Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 357dc9516c87a9d2caf5c0f50c455e56 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterBase
 f5f8cdd8fdf411748d2df8ad0fe39043 Assembly-CSharp.dll:.ScripVideoSelcionado
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
