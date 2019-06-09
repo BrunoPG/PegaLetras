@@ -18,7 +18,7 @@ public class PalavrasJogo : MonoBehaviour
     public TextMeshProUGUI palavra;
     public TextMeshProUGUI contagem;
     public TextMeshProUGUI TxtVidas;
-    public config config;
+    public configJogo config;
     public random_positions randomPosition;
     Image img;
     int index;
@@ -54,7 +54,9 @@ public class PalavrasJogo : MonoBehaviour
 
     private void FimDeJogo()
     {
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        this.enabled = false;
+        Destroy(this);
     }
 
 
@@ -133,6 +135,7 @@ public class PalavrasJogo : MonoBehaviour
             aumentarImagem();
             movimentaImg = false;
             config.pause = true;
+            FimDeJogo();
         }
         TxtVidas.text = vidas+"";
 
@@ -183,8 +186,13 @@ public class PalavrasJogo : MonoBehaviour
             if (letrasEncontradas.Equals("")) { 
                 for (int i =0; i <= palavras[idx].Length - 1; i++)
                 {
-                    text = text + "_";
-                    config.letrasFaltantes.Add(palavras[index][i] + "");
+                    if (palavras[idx][i].Equals(" "))
+                        text = text + " ";
+                    else
+                    {
+                        text = text + "_";
+                        config.letrasFaltantes.Add(palavras[index][i] + "");
+                    }
                 }
                 letrasEncontradas = text;
                 palavra.GetComponent<TextMeshProUGUI>().text = letrasEncontradas;                
@@ -196,6 +204,7 @@ public class PalavrasJogo : MonoBehaviour
 
     private bool EscreveLetra(string letra)
     {
+        bool achou = false;
         string txtSemAcento = tirarAcento(palavras[index]);
         if (txtSemAcento.Contains(letra+""))
         {
@@ -204,10 +213,11 @@ public class PalavrasJogo : MonoBehaviour
             for (int i = 0; i <= txtSemAcento.Length -1; i++)
             {                
                 string letEncSemAcento = tirarAcento(letrasEncontradas);
-                if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_"))
+                if ((txtSemAcento[i]+"").Equals(letra) && (letrasEncontradas[i]+"").Equals("_") && !achou)
                 {
                     Novotext = Novotext + palavras[index][i];
                     config.letrasFaltantes.Remove(palavras[index][i]+"");
+                    achou = true;
                 }
                 else if ((letEncSemAcento[i]+"").Equals(txtSemAcento[i]+""))
                     Novotext = Novotext + palavras[index][i];

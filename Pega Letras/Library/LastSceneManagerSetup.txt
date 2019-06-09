@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/scene/trem.unity
+=======
+- path: Assets/scene/c4_bolha.unity
+>>>>>>> 673c0492e68c6826d60e3a0504a4534799cce38e
   isLoaded: 1
   isActive: 1
