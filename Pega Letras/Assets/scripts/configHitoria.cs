@@ -19,10 +19,10 @@ public class configHitoria : MonoBehaviour
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
             return;
 
-         if (gestureListener.IsWave())
-            voltar();
-        else if (gestureListener.IsJump())
-            jogar();              
+         //if (gestureListener.IsWave())
+         //   voltar();
+        //else if (gestureListener.IsJump())
+        //    jogar();              
     }
 
     void voltar()
@@ -41,7 +41,7 @@ public class configHitoria : MonoBehaviour
         else if (ScripVideoSelcionado.indexVideo == 2)
             UnityEngine.SceneManagement.SceneManager.LoadScene("casa_ruinas");
         else if (ScripVideoSelcionado.indexVideo == 3)
-            UnityEngine.SceneManagement.SceneManager.LoadScene("bolhas");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("bolha");
         else if (ScripVideoSelcionado.indexVideo == 4)
             UnityEngine.SceneManagement.SceneManager.LoadScene("ocorrencia");
         else if (ScripVideoSelcionado.indexVideo == 5)

@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794557351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2edae2acb6efb649902a362316aab1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b1b70c932809d44af77b80bdc80b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 0
@@ -1627,8 +1627,8 @@ MonoBehaviour:
   somAmbiente: {fileID: 1794557357}
   ganhou: {fileID: 0}
   perdeu: {fileID: 0}
-  PErro: {fileID: 0}
-  PAcerto: {fileID: 0}
+  PErro: {fileID: 2100000, guid: ff70aa1afc62ec443b61d76d0c9d1794, type: 2}
+  PAcerto: {fileID: 2100000, guid: e99207beb9075ab4a9f863482553b62a, type: 2}
   trocaImg: 0
   letrasFaltantes: []
 --- !u!82 &1794557357

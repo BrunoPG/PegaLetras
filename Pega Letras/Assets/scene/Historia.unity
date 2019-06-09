@@ -565,7 +565,7 @@ MonoBehaviour:
   Player2Avatars: []
   Player1CalibrationPose: 0
   Player2CalibrationPose: 0
-  Player1Gestures: 060000001100000008000000090000000a0000000b0000000700000013000000
+  Player1Gestures: 
   Player2Gestures: 
   MinTimeBetweenGestures: 0.7
   GestureListeners:
@@ -3192,7 +3192,7 @@ GameObject:
   - component: {fileID: 352273216}
   - component: {fileID: 352273215}
   m_Layer: 0
-  m_Name: O relogio
+  m_Name: Paciente destraido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3206,7 +3206,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352273214}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: dcf6dc297beeaa04e845d34debb0b6b5, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4952fcae5b0ec9c48b6e4f6165be3d79, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -12714,7 +12714,7 @@ GameObject:
   - component: {fileID: 1247599086}
   - component: {fileID: 1247599085}
   m_Layer: 0
-  m_Name: O Eco
+  m_Name: Ocorrencia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12728,7 +12728,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247599084}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 09e68a7eecaa5e044891be449b500e97, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5a941ae799758694287d3e1d84905542, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

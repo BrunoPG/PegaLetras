@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class hand_left : MonoBehaviour
 {
-	[SerializeField]
-	private ParticleSystem Particula;
+	//[SerializeField]
+	public ParticleSystem Particula;
     public PalavrasJogo Scriptjogo;
     public KinectWrapper.NuiSkeletonPositionIndex joint = KinectWrapper.NuiSkeletonPositionIndex.HandLeft;
-    public configJogo configuracao;
-
+    public configJogo configuracao;    
     // joint position at the moment, in Kinect coordinates
-	public Vector3 outputPosition;
-
+    public Vector3 outputPosition;
+    KinectManager manager;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
+
     }
 
+   
     // Update is called once per frame
     void Update()
     {
         // get the joint position
-		KinectManager manager = KinectManager.Instance;
+        manager = KinectManager.Instance;
 
-		if(manager && manager.IsInitialized())
+        if (manager && manager.IsInitialized())
 		{
 
 			if(manager.IsUserDetected())

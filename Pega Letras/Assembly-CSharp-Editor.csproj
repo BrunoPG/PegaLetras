@@ -60,17 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\TerrainTools\BridgeTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\CloneBrushTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\ErodeHeightTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\MeshStampTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\PinchHeight.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\RidgeErodeTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\SharpenHeightTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\SlopeFlattenTool.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\SmudgeHeight.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\TerraceErosion.cs" />
-    <Compile Include="Assets\Editor\TerrainTools\TwistHeight.cs" />
     <Compile Include="Assets\NatureStarterKit2\Editor\ImageEffects\AntialiasingEditor.cs" />
     <Compile Include="Assets\NatureStarterKit2\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
     <Compile Include="Assets\NatureStarterKit2\Editor\ImageEffects\BloomEditor.cs" />

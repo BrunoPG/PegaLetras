@@ -54,7 +54,9 @@ public class PalavrasJogo : MonoBehaviour
 
     private void FimDeJogo()
     {
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
+        this.enabled = false;
+        Destroy(this);
     }
 
 
@@ -133,6 +135,7 @@ public class PalavrasJogo : MonoBehaviour
             aumentarImagem();
             movimentaImg = false;
             config.pause = true;
+            FimDeJogo();
         }
         TxtVidas.text = vidas+"";
 

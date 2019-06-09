@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/MenuInicial.unity
+- path: Assets/scene/a_porta.unity
   isLoaded: 1
   isActive: 1

@@ -417,7 +417,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 260
+  m_textAlignment: 258
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 30
   m_wordSpacing: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -66.662865, y: 0, z: -33.344006, w: 0}
+  m_margin: {x: -286.72742, y: 0, z: -375.02597, w: 0}
   m_textInfo:
     textComponent: {fileID: 321033114}
     characterCount: 4
@@ -1543,7 +1543,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794557351}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1794557353
 Camera:
   m_ObjectHideFlags: 0
@@ -1613,6 +1613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 1794557356}
+  right: {fileID: 1659119677}
+  left: {fileID: 219550869}
 --- !u!114 &1794557356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1624,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794557351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2edae2acb6efb649902a362316aab1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b1b70c932809d44af77b80bdc80b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pause: 0
