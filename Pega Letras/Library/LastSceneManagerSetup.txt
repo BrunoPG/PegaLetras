@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/Testes.unity
+- path: Assets/scene/trem.unity
   isLoaded: 1
   isActive: 1
