@@ -8,7 +8,7 @@ public class random_positions : MonoBehaviour
     private float InstantiationTimer = 3f;
     public configJogo config;
     // Start is called before the first frame update
-    private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";    
+    private string letras = "ABCDEFGHIJKLMNOPQRSTUVXWYZÇ";    
     int cont;
     void Start()
     {

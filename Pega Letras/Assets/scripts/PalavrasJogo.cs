@@ -54,6 +54,14 @@ public class PalavrasJogo : MonoBehaviour
 
     private void FimDeJogo()
     {
+        if (ordem.Count <= 0)
+        {
+            config.perdeu.Play();
+        }
+        else
+        {
+            config.ganhou.Play();
+        }
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         this.enabled = false;
         Destroy(this);
