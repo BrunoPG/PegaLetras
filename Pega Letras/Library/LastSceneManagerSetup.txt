@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/c5_ocorrencia.unity
+- path: Assets/scene/c6_paciente.unity
   isLoaded: 1
   isActive: 1
