@@ -136,6 +136,7 @@
     <Compile Include="Assets\scripts\PalavrasJogo.cs" />
     <Compile Include="Assets\scripts\ScriptVideo.cs" />
     <Compile Include="Assets\scripts\ScripVideoSelcionado.cs" />
+    <Compile Include="Assets\scripts\voltar.cs" />
     <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
     <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
     <None Include="Assets\Shaders\TerraceErosion.shader" />

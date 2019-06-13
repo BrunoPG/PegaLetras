@@ -4,19 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class movimentos : MonoBehaviour
 {
+
     
     void Start()
     {
-        
+        ///MouseControl.MouseMove(new Vector3(0, 0, 0), new GUIText());
     }
 
     // Update is called once per frame
     void Update()
     {
         
-
     }
 
 
@@ -59,10 +61,8 @@ public class movimentos : MonoBehaviour
     }
     public void ChamaCenaMenuHistoria()
     {
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        this.enabled = false;
-        Destroy(this);
+        SceneManager.LoadScene(1);
+        Destroy(GetComponent<Camera>().gameObject);
     }
 
     public void SairJogo()

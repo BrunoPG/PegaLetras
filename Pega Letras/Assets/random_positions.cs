@@ -24,7 +24,7 @@ public class random_positions : MonoBehaviour
         if (InstantiationTimer <= 0)
         {
             int index = -1;
-            if (cont <= 5)
+            if (cont <= 3)
             {
                 index = Random.Range(0, this.letras.Length - 1);
                 cont++;
@@ -32,7 +32,7 @@ public class random_positions : MonoBehaviour
             else
             {
                 int p = Random.Range(0, config.letrasFaltantes.Count- 1);
-                index = letras.IndexOf(config.letrasFaltantes[p]);                    
+                index = letras.IndexOf(PalavrasJogo.tirarAcento(config.letrasFaltantes[p]));                    
                 cont = 0;
             }
                    

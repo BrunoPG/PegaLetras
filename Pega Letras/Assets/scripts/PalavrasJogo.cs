@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum TIPO_IMG
@@ -20,6 +21,7 @@ public class PalavrasJogo : MonoBehaviour
     public TextMeshProUGUI TxtVidas;
     public configJogo config;
     public random_positions randomPosition;
+    public voltar voltar;
     Image img;
     int index;
     bool iniciou, movimentaImg;
@@ -47,13 +49,12 @@ public class PalavrasJogo : MonoBehaviour
         SortearOrdemPalavra();
         movimentaImg = false;
         tipo = TIPO_IMG.IMG_G;
-        vidas = 5;
-
-        //randomPosition = mainCamera.GetComponent<random_positions>();
+        vidas = 5;        
     }
 
     private void FimDeJogo()
-    {
+    {        
+        config.somAmbiente.Pause();
         if (ordem.Count <= 0)
         {
             config.perdeu.Play();
@@ -62,14 +63,13 @@ public class PalavrasJogo : MonoBehaviour
         {
             config.ganhou.Play();
         }
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-        this.enabled = false;
-        Destroy(this);
+        voltar.inicio();
     }
 
 
     void Update()
-    {       
+    {
+        bool Fim = false;
         if (!iniciou)
         {
             tempo -= Time.deltaTime;
@@ -107,7 +107,7 @@ public class PalavrasJogo : MonoBehaviour
             {
                 letrasEncontradas = "";                
             }else if (ordem.Count == 0) {
-                FimDeJogo();
+                Fim = true;
             }
 
             if (movimentaImg)
@@ -133,7 +133,11 @@ public class PalavrasJogo : MonoBehaviour
             else{ randomPosition.config.pause = false; }
                
 
-
+            if (Fim)
+            {
+                FimDeJogo();
+                return;
+            }
 
 
         }
@@ -194,7 +198,7 @@ public class PalavrasJogo : MonoBehaviour
             if (letrasEncontradas.Equals("")) { 
                 for (int i =0; i <= palavras[idx].Length - 1; i++)
                 {
-                    if (palavras[idx][i].Equals(" "))
+                    if (palavras[idx][i].Equals(' '))
                         text = text + " ";
                     else
                     {
@@ -243,7 +247,7 @@ public class PalavrasJogo : MonoBehaviour
         
     }
 
-    private string tirarAcento(string palavra)
+    public static string tirarAcento(string palavra)
     {
         string retorno = "";     
         for (int i =0;i <= palavra.Length-1;i++)

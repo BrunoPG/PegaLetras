@@ -56,7 +56,7 @@ public class hand_left : MonoBehaviour
             obj.GetComponent<Renderer>().material = configuracao.PErro;
         Destroy(col.gameObject, 0.5f);
         obj.Play();		
-		Destroy(obj, 1f); 
+		Destroy(obj.gameObject, 1f); 
 	
     }
 }

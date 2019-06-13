@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class configHitoria : MonoBehaviour
 {
@@ -27,27 +28,25 @@ public class configHitoria : MonoBehaviour
 
     void voltar()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuInicial");
-        this.enabled = false;
-        Destroy(this);
+        SceneManager.LoadScene(0);
+        Destroy(GetComponent<Camera>().gameObject);
     }
 
     public void jogar()
     {
         if (ScripVideoSelcionado.indexVideo == 0)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            SceneManager.LoadScene(2);
         else if (ScripVideoSelcionado.indexVideo == 1)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            SceneManager.LoadScene(3);
         else if (ScripVideoSelcionado.indexVideo == 2)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            SceneManager.LoadScene(4);
         else if (ScripVideoSelcionado.indexVideo == 3)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+            SceneManager.LoadScene(5);
         else if (ScripVideoSelcionado.indexVideo == 4)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+            SceneManager.LoadScene(6);
         else if (ScripVideoSelcionado.indexVideo == 5)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(7);
-
-        this.enabled = false;
-        Destroy(this);
+            SceneManager.LoadScene(7);
+        
+        Destroy(GetComponent<Camera>().gameObject);
     }
 }
