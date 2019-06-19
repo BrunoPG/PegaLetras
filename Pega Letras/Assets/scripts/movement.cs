@@ -8,9 +8,11 @@ public class movement : MonoBehaviour
     public configJogo config;
     public MeshRenderer mesh;
     private float timer;
+    private bool alterouVel;
     // Start is called before the first frame update
     void Start()
     {
+        alterouVel = false;
         timer = config.timerLetras;
         if (mesh != null)
         {
@@ -37,11 +39,38 @@ public class movement : MonoBehaviour
         if (timer <= 0)
         {
             if (!this.shouldMove)
+            {
                 transform.localPosition += Vector3.back * 1 / 24;
+                alterouVel = false;
+            }
             else
-                transform.localPosition += Vector3.forward * 1 / 16;
+            {
+                transform.localPosition += Vector3.forward * 1 / 16;                
+                alterouVel = false;
+            }
 
             timer = config.timerLetras;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !alterouVel)
+        {            
+            config.timerLetras = config.timerLetras - 0.01f;
+            if (config.timerLetras < 0.00f)
+            {
+                config.timerLetras = 0.00f;
+            }
+
+            alterouVel = true;
+        }
+        else
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !alterouVel)
+        {
+            config.timerLetras = config.timerLetras + 0.01f;
+            if (config.timerLetras > 0.05f)
+            {
+                config.timerLetras = 0.05f;
+            }
+            alterouVel = true;
         }
     }
 
@@ -52,4 +81,6 @@ public class movement : MonoBehaviour
         Destroy(this);
 
     }
+
+
 }

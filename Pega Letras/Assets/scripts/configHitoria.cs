@@ -14,9 +14,9 @@ public class configHitoria : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {      
 
-        KinectManager kinectManager = KinectManager.Instance;
+            KinectManager kinectManager = KinectManager.Instance;
         if ((!kinectManager || !kinectManager.IsInitialized() || !kinectManager.IsUserDetected()))
             return;
 

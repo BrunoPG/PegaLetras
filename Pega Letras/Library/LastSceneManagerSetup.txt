@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/c6_paciente.unity
+- path: Assets/scene/01MenuInicial.unity
   isLoaded: 1
   isActive: 1

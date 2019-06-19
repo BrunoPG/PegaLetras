@@ -45,7 +45,7 @@ public class ScripVideoSelcionado : MonoBehaviour
 
     void Update()
     {
-        if (videoSelecionado.isPaused)
+        if (videoSelecionado.isPaused || Input.GetKeyDown(KeyCode.KeypadEnter))
             historia.jogar();
 
     }
